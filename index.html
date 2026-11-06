@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>mrds14.com-mrds14.com官网首页_mrds14.com访问地址</title>
+<meta name="description" content="mrds14.com 首页入口，提供站点访问地址、页面导航与使用说明，帮助访客快速了解 mrds14.com 的定位与可用入口。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f172a'/%3E%3Cpath d='M14 44V20h7l11 14 11-14h7v24h-6V30l-9 11h-6l-9-11v14z' fill='%2338bdf8'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#0f172a;
+  --ink-2:#1e293b;
+  --muted:#5b6b82;
+  --line:#e2e8f0;
+  --bg:#f6f8fb;
+  --card:#ffffff;
+  --accent:#0f7bd4;
+  --accent-2:#38bdf8;
+  --accent-soft:#e8f4fd;
+  --radius:16px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color:var(--ink);
+  background:var(--bg);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1120px,92vw);margin:0 auto}
+/* ---------- header ---------- */
+header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(255,255,255,.88);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.nav{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:16px;padding:12px 0;
+}
+.logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:18px;letter-spacing:.2px}
+.logo svg{width:34px;height:34px;flex:none}
+.logo span{color:var(--ink)}
+.nav-links{display:flex;gap:22px;flex-wrap:wrap}
+.nav-links a{
+  font-size:14px;color:var(--muted);padding:4px 0;position:relative;transition:color .2s;
+}
+.nav-links a:hover{color:var(--accent)}
+.nav-links a::after{
+  content:"";position:absolute;left:0;bottom:-2px;height:2px;width:0;background:var(--accent);
+  transition:width .22s;border-radius:2px;
+}
+.nav-links a:hover::after{width:100%}
+/* ---------- hero ---------- */
+.hero{
+  background:
+    radial-gradient(900px 420px at 82% -10%,rgba(56,189,248,.20),transparent 60%),
+    radial-gradient(700px 380px at 6% 10%,rgba(15,123,212,.14),transparent 62%),
+    linear-gradient(180deg,#ffffff 0%,#f1f7fd 100%);
+  border-bottom:1px solid var(--line);
+  padding:62px 0 54px;
+}
+.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:44px;align-items:center}
+.tag{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--accent-soft);color:#0a63ac;
+  font-size:13px;font-weight:600;padding:5px 13px;border-radius:999px;
+  border:1px solid #cfe7fa;margin-bottom:18px;
+}
+.tag i{width:7px;height:7px;border-radius:50%;background:var(--accent);display:inline-block}
+h1{
+  font-size:clamp(28px,4.4vw,46px);
+  line-height:1.22;font-weight:800;letter-spacing:-.5px;
+  word-break:break-word;
+}
+.hero p.lead{
+  margin-top:18px;font-size:16px;color:var(--muted);max-width:52ch;
+}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:28px}
+.btn{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:12px 24px;border-radius:12px;font-size:15px;font-weight:600;
+  transition:transform .16s,box-shadow .16s,background .16s;
+}
+.btn-primary{background:var(--accent);color:#fff;box-shadow:0 10px 22px -12px rgba(15,123,212,.9)}
+.btn-primary:hover{background:#0b6cbd;transform:translateY(-1px)}
+.btn-ghost{background:#fff;color:var(--ink-2);border:1px solid var(--line)}
+.btn-ghost:hover{border-color:#bcd4ea;transform:translateY(-1px)}
+.hero-visual{
+  background:#fff;border:1px solid var(--line);border-radius:22px;
+  padding:22px;box-shadow:0 26px 50px -34px rgba(15,23,42,.4);
+}
+.hero-visual svg{width:100%;height:auto;display:block}
+.hero-visual .cap{
+  margin-top:14px;font-size:13px;color:var(--muted);text-align:center;
+}
+/* ---------- sections ---------- */
+section{padding:56px 0}
+.sec-head{margin-bottom:30px}
+.sec-head h2{font-size:clamp(21px,2.6vw,27px);font-weight:800;letter-spacing:-.2px}
+.sec-head p{color:var(--muted);font-size:15px;margin-top:8px;max-width:66ch}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:24px;transition:transform .18s,box-shadow .18s,border-color .18s;
+}
+.card:hover{transform:translateY(-3px);box-shadow:0 20px 38px -28px rgba(15,23,42,.5);border-color:#c9dcf0}
+.card .ico{
+  width:42px;height:42px;border-radius:12px;background:var(--accent-soft);
+  display:flex;align-items:center;justify-content:center;margin-bottom:16px;
+}
+.card .ico svg{width:22px;height:22px}
+.card h3{font-size:17px;font-weight:700;margin-bottom:8px}
+.card p{font-size:14.5px;color:var(--muted)}
+/* ---------- about block ---------- */
+.about{
+  background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+.about-grid h2{font-size:clamp(21px,2.6vw,27px);font-weight:800;margin-bottom:16px}
+.about-grid p{color:var(--ink-2);font-size:15.5px;margin-bottom:14px}
+.facts{list-style:none;display:grid;gap:14px}
+.facts li{
+  display:flex;gap:12px;align-items:flex-start;
+  background:var(--bg);border:1px solid var(--line);border-radius:12px;padding:14px 16px;
+}
+.facts .dot{
+  width:9px;height:9px;border-radius:50%;background:var(--accent);margin-top:9px;flex:none;
+}
+.facts b{display:block;font-size:14.5px;color:var(--ink)}
+.facts span{font-size:13.5px;color:var(--muted)}
+/* ---------- steps ---------- */
+.steps{counter-reset:s}
+.step{
+  display:flex;gap:18px;align-items:flex-start;
+  padding:20px 0;border-bottom:1px dashed var(--line);
+}
+.step:last-child{border-bottom:none}
+.step .num{
+  counter-increment:s;flex:none;
+  width:38px;height:38px;border-radius:50%;
+  background:var(--ink);color:#fff;font-weight:700;font-size:15px;
+  display:flex;align-items:center;justify-content:center;
+}
+.step .num::before{content:counter(s,decimal-leading-zero)}
+.step h3{font-size:16.5px;font-weight:700;margin-bottom:5px}
+.step p{font-size:14.5px;color:var(--muted)}
+/* ---------- download ---------- */
+.dl{
+  background:linear-gradient(135deg,#0f172a 0%,#123a63 100%);
+  color:#e9f2fb;border-radius:22px;padding:40px;
+  display:flex;justify-content:space-between;align-items:center;gap:32px;flex-wrap:wrap;
+}
+.dl h2{font-size:clamp(20px,2.6vw,26px);font-weight:800;color:#fff;margin-bottom:10px}
+.dl p{font-size:14.5px;color:#b7cde3;max-width:54ch}
+.dl .btn-dl{
+  background:var(--accent-2);color:#062338;font-weight:700;
+  padding:13px 30px;border-radius:12px;font-size:15px;
+  pointer-events:none;display:inline-flex;align-items:center;gap:9px;
+  opacity:.95;
+}
+.dl .btn-dl svg{width:18px;height:18px}
+/* ---------- faq ---------- */
+.faq details{
+  background:#fff;border:1px solid var(--line);border-radius:12px;
+  padding:16px 20px;margin-bottom:12px;
+}
+.faq summary{
+  cursor:pointer;font-weight:600;font-size:15.5px;color:var(--ink);
+  list-style:none;display:flex;justify-content:space-between;gap:12px;align-items:center;
+}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:20px;color:var(--accent);line-height:1}
+.faq details[open] summary::after{content:"–"}
+.faq details p{margin-top:12px;font-size:14.5px;color:var(--muted)}
+/* ---------- footer ---------- */
+footer{
+  background:#0f172a;color:#a9bccf;padding:40px 0 28px;font-size:14px;
+}
+.foot-top{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:center}
+.foot-logo{display:flex;align-items:center;gap:10px;color:#fff;font-weight:800;font-size:16px}
+.foot-logo svg{width:30px;height:30px}
+.foot-links{display:flex;gap:20px;flex-wrap:wrap}
+.foot-links a{color:#a9bccf;transition:color .2s}
+.foot-links a:hover{color:#7dd3fc}
+.foot-bottom{
+  margin-top:24px;padding-top:18px;border-top:1px solid #23324a;
+  font-size:13px;color:#7f95ab;
+}
+/* ---------- responsive ---------- */
+@media(max-width:900px){
+  .hero-grid{grid-template-columns:1fr;gap:32px}
+  .about-grid{grid-template-columns:1fr;gap:30px}
+  .grid-3{grid-template-columns:1fr 1fr}
+}
+@media(max-width:680px){
+  .nav{flex-direction:column;align-items:flex-start;gap:10px;padding:12px 0}
+  .nav-links{gap:14px}
+  .nav-links a{font-size:13.5px}
+  .hero{padding:40px 0 36px}
+  section{padding:42px 0}
+  .grid-3,.grid-2{grid-template-columns:1fr}
+  .dl{padding:28px 22px}
+  .hero-visual{padding:16px}
+}
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top" aria-label="mrds14.com 首页">
+      <svg viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#0f172a"/>
+        <path d="M14 44V20h7l11 14 11-14h7v24h-6V30l-9 11h-6l-9-11v14z" fill="#38bdf8"/>
+      </svg>
+      <span>mrds14.com</span>
+    </a>
+    <nav class="nav-links" aria-label="主导航">
+      <a href="#intro">站点概览</a>
+      <a href="#services">栏目导航</a>
+      <a href="#access">访问步骤</a>
+      <a href="#download">下载入口</a>
+      <a href="#faq">常见问题</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="tag"><i></i>站点首页 · 访问入口</span>
+        <h1>mrds14.com</h1>
+        <p class="lead">mrds14.com 是一个以站点访问为核心的入口页面。本页把地址、栏目导航与使用说明集中呈现，帮助访客在最短时间内确认 mrds14.com 的定位，并找到自己需要的页面方向。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#access">查看访问步骤</a>
+          <a class="btn btn-ghost" href="#services">浏览栏目导航</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <svg viewBox="0 0 360 260" role="img" aria-label="站点访问结构示意插画">
+          <defs>
+            <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#e8f4fd"/>
+              <stop offset="1" stop-color="#ffffff"/>
+            </linearGradient>
+          </defs>
+          <rect x="8" y="8" width="344" height="244" rx="16" fill="url(#g1)" stroke="#dbe8f5"/>
+          <rect x="30" y="30" width="180" height="14" rx="7" fill="#bfdcf5"/>
+          <rect x="30" y="56" width="120" height="10" rx="5" fill="#d7e8f7"/>
+          <rect x="30" y="92" width="140" height="46" rx="10" fill="#ffffff" stroke="#cfe3f5"/>
+          <rect x="44" y="106" width="80" height="8" rx="4" fill="#0f7bd4" opacity=".75"/>
+          <rect x="44" y="120" width="106" height="6" rx="3" fill="#cfe0ee"/>
+          <rect x="30" y="152" width="140" height="46" rx="10" fill="#ffffff" stroke="#cfe3f5"/>
+          <rect x="44" y="166" width="62" height="8" rx="4" fill="#38bdf8"/>
+          <rect x="44" y="180" width="96" height="6" rx="3" fill="#cfe0ee"/>
+          <rect x="196" y="92" width="132" height="106" rx="12" fill="#0f172a"/>
+          <circle cx="222" cy="120" r="9" fill="#38bdf8"/>
+          <rect x="240" y="114" width="66" height="7" rx="3.5" fill="#3d5a78"/>
+          <rect x="240" y="128" width="48" height="6" rx="3" fill="#2c4560"/>
+          <rect x="212" y="152" width="100" height="6" rx="3" fill="#2c4560"/>
+          <rect x="212" y="168" width="76" height="6" rx="3" fill="#2c4560"/>
+          <rect x="30" y="214" width="298" height="10" rx="5" fill="#e2eefa"/>
+        </svg>
+        <p class="cap">页面结构示意：地址、导航与内容入口</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 概览 -->
+  <section id="intro">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>认识 mrds14.com 的页面构成</h2>
+        <p>首页承担引导职责，把访问者最关心的三件事放在最前面：站点地址是否可直接访问、页面上有哪些内容方向、遇到访问问题该从哪里入手。</p>
+      </div>
+      <div class="grid-3">
+        <div class="card">
+          <div class="ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#0f7bd4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 2.5 15.4 0 18M12 3c-2.5 2.6-2.5 15.4 0 18"/></svg>
+          </div>
+          <h3>地址入口</h3>
+          <p>mrds14.com 以域名本身作为访问标识，本站首页即为该地址的公开入口页，便于访客确认所访问的站点身份。</p>
+        </div>
+        <div class="card">
+          <div class="ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#0f7bd4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M3 9h18M8 13h8M8 16.5h5"/></svg>
+          </div>
+          <h3>内容导航</h3>
+          <p>页面按使用场景拆分为概览、导航、访问步骤与常见问题几个板块，访客可跳转到需要的那一段，而不必通读全文。</p>
+        </div>
+        <div class="card">
+          <div class="ico">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#0f7bd4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4v6c0 4.2-3.4 7.4-8 8-4.6-.6-8-3.8-8-8V7z"/><path d="M9 12l2 2 4-4"/></svg>
+          </div>
+          <h3>使用提示</h3>
+          <p>关于访问异常、浏览器选择与页面加载的说明集中在问答区，帮助访客自行判断问题出在网络、设备还是地址输入。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 关于 -->
+  <section id="about" class="about">
+    <div class="wrap about-grid">
+      <div>
+        <h2>mrds14.com 的定位与说明</h2>
+        <p>mrds14.com 是一个域名形式的站点标识。本页作为其首页，主要作用是向访客说明该地址的用途与可用的浏览路径，而不是承载大量正文内容。因此页面把信息密度控制在合理范围内，让访问者一眼看出所处的站点。</p>
+        <p>首页采用统一导航与分块内容的结构：顶部固定导航给出主要板块，首屏交代主题，主体按访问需求依次展开概览、导航、步骤与问答。这样的排列方式适合以入口为主的站点，也方便在手机屏幕上从上到下顺序阅读。</p>
+        <p>需要说明的是，本页不对 mrds14.com 之外的任何服务作出承诺。页面中关于栏目的描述，指的是本页内部的导航结构，访客可据此在本页内定位内容。</p>
+      </div>
+      <ul class="facts">
+        <li><span class="dot"></span><div><b>页面类型</b><span>站点首页，单页结构，内容以导航与说明为主</span></div></li>
+        <li><span class="dot"></span><div><b>访问方式</b><span>在浏览器地址栏输入 mrds14.com 即可进入本站首页</span></div></li>
+        <li><span class="dot"></span><div><b>内容组织</b><span>导航栏、首屏、概览卡片、访问步骤、问答与页尾</span></div></li>
+        <li><span class="dot"></span><div><b>适配范围</b><span>桌面与移动端均可浏览，导航与卡片随屏宽自动调整</span></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 栏目导航 -->
+  <section id="services">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>页面栏目一览</h2>
+        <p>每个栏目对应一种访问目的。下面的说明告诉你各栏目分别回答什么问题，方便直接跳转，不必逐段阅读。</p>
+      </div>
+      <div class="grid-2">
+        <div class="card">
+          <h3>站点概览</h3>
+          <p>回答“这是什么页面”。概述 mrds14.com 首页的用途、信息范围与结构，是首次访问时最合适的起点。</p>
+        </div>
+        <div class="card">
+          <h3>访问步骤</h3>
+          <p>回答“怎么打开”。给出从输入地址到页面呈现的完整过程，并提示常见输入错误，例如多余空格或拼写偏差。</p>
+        </div>
+        <div class="card">
+          <h3>下载入口</h3>
+          <p>为本页预留的下载区域，目前按钮处于占位状态，尚未指向实际文件。后续替换为真实地址后即可正常使用。</p>
+        </div>
+        <div class="card">
+          <h3>常见问题</h3>
+          <p>回答“打不开怎么办”。集中处理加载缓慢、页面白屏、移动端显示等常见情形，并给出可自行排查的顺序。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 访问步骤 -->
+  <section id="access">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>访问 mrds14.com 的四个步骤</h2>
+        <p>按顺序操作即可完成一次正常访问。若中途出现异常，可对照下方问答区逐项排查。</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="num"></div>
+          <div>
+            <h3>打开浏览器</h3>
+            <p>使用主流浏览器，桌面端与移动端均可。建议保持浏览器为较新版本，避免旧版内核对页面样式支持不足。</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="num"></div>
+          <div>
+            <h3>输入完整地址</h3>
+            <p>在地址栏输入 mrds14.com，注意不要带入多余的空格或中文字符。域名中的点号为英文半角，大小写不影响访问。</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="num"></div>
+          <div>
+            <h3>确认页面加载</h3>
+            <p>页面载入后应看到顶部的品牌标识与首屏标题。若长时间空白，可先刷新一次，再检查当前网络是否稳定。</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="num"></div>
+          <div>
+            <h3>按需跳转栏目</h3>
+            <p>通过顶部导航或正文中的入口，跳转到概览、步骤、下载或问答板块，直接获取所需内容。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 下载 -->
+  <section id="download">
+    <div class="wrap">
+      <div class="dl">
+        <div>
+          <h2>下载区域</h2>
+          <p>本页预留了下载入口，目前尚未关联实际文件，按钮保持不可点击状态。待真实地址就绪后，此处的下载按钮将恢复可用，届时可直接获取对应内容。</p>
+        </div>
+        <a class="btn-dl" href="#" data-download-placeholder="true" aria-disabled="true" tabindex="-1" role="button" aria-label="下载（暂未开放）">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11M7 12l5 5 5-5M5 20h14"/></svg>
+          下载
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>常见问题</h2>
+        <p>以下问题来自访问入口类站点最常遇到的情形，按顺序排查通常能定位原因。</p>
+      </div>
+      <details open>
+        <summary>mrds14.com 打不开应该先检查什么？</summary>
+        <p>先确认地址拼写是否完整，特别是域名中的数字与点号；其次检查当前网络连接是否正常，可尝试打开其他网站对比；最后换一个浏览器或刷新页面重试。多数情况下问题出在地址输入或本地网络。</p>
+      </details>
+      <details>
+        <summary>页面在手机上显示不完整怎么办？</summary>
+        <p>本站首页已针对小屏做适配，导航、卡片与正文会随屏宽调整。若显示异常，可先确认浏览器缩放比例为默认值，并尝试旋转屏幕或重新加载页面。</p>
+      </details>
+      <details>
+        <summary>下载按钮为什么点击没有反应？</summary>
+        <p>该按钮目前为占位状态，尚未绑定实际文件地址，因此被设为不可点击。这是页面当前阶段的正常表现，待真实地址配置完成后即可使用。</p>
+      </details>
+      <details>
+        <summary>页面上的导航链接指向哪里？</summary>
+        <p>导航链接均指向本页内部对应的内容区块，例如站点概览、访问步骤与常见问题，点击后会平滑滚动到相应位置，不会跳转到其他站点。</p>
+      </details>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-logo">
+        <svg viewBox="0 0 64 64" aria-hidden="true">
+          <rect width="64" height="64" rx="14" fill="#1b2b45"/>
+          <path d="M14 44V20h7l11 14 11-14h7v24h-6V30l-9 11h-6l-9-11v14z" fill="#38bdf8"/>
+        </svg>
+        <span>mrds14.com</span>
+      </div>
+      <div class="foot-links">
+        <a href="#intro">站点概览</a>
+        <a href="#services">栏目导航</a>
+        <a href="#access">访问步骤</a>
+        <a href="#download">下载入口</a>
+        <a href="#faq">常见问题</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <p>mrds14.com 首页 · 本页以站点访问入口与使用说明为主要内容，页面信息仅针对本站首页本身。</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
