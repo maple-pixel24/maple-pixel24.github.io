@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日大赛51在线观看-每日大赛51在线观看入口_最新赛程与看点集合</title>
+<meta name="description" content="每日大赛51在线观看主题首页，汇总每日大赛的观看入口、当日赛程看点、热门对阵与历史集锦，帮助你快速找到每日大赛51在线观看的对应内容与更新提示。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23111a2b'/%3E%3Cpath d='M18 42 L32 16 L46 42 Z' fill='%23ffb020'/%3E%3Ccircle cx='32' cy='46' r='5' fill='%23ff5a3c'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#111a2b;
+  --ink-2:#26334d;
+  --muted:#5d6b85;
+  --line:#e3e8f1;
+  --bg:#f6f8fc;
+  --card:#ffffff;
+  --brand:#ff5a3c;
+  --gold:#ffb020;
+  --teal:#0f9d8f;
+  --radius:16px;
+  --shadow:0 10px 30px rgba(17,26,43,.08);
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink-2);
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Noto Sans SC",system-ui,-apple-system,sans-serif;
+  line-height:1.75;
+  font-size:16px;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none;}
+img,svg{display:block;max-width:100%;}
+.wrap{width:100%;max-width:1160px;margin:0 auto;padding:0 20px;}
+h1,h2,h3{margin:0;color:var(--ink);line-height:1.35;}
+p{margin:0;}
+ul{margin:0;padding:0;list-style:none;}
+
+/* header */
+.site-header{
+  position:sticky;top:0;z-index:50;
+  background:rgba(246,248,252,.92);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.header-inner{
+  display:flex;align-items:center;gap:24px;
+  height:72px;
+}
+.logo{display:flex;align-items:center;gap:10px;flex-shrink:0;}
+.logo-mark{width:36px;height:36px;flex-shrink:0;}
+.logo-text{
+  font-size:17px;font-weight:800;color:var(--ink);
+  letter-spacing:.2px;white-space:nowrap;
+}
+.nav{margin-left:auto;display:flex;align-items:center;gap:6px;flex-wrap:wrap;}
+.nav a{
+  font-size:14.5px;color:var(--muted);
+  padding:8px 12px;border-radius:10px;
+  transition:.2s;
+}
+.nav a:hover{color:var(--ink);background:#eef2f9;}
+.nav .nav-cta{
+  background:var(--ink);color:#fff;font-weight:600;
+  padding:8px 16px;
+}
+.nav .nav-cta:hover{background:#1d2b45;color:#fff;}
+.nav-toggle{display:none;}
+
+/* hero */
+.hero{
+  position:relative;overflow:hidden;
+  background:linear-gradient(135deg,#111a2b 0%,#1b2a45 55%,#24365a 100%);
+  color:#e8eefc;
+  padding:56px 0 60px;
+}
+.hero::before{
+  content:"";position:absolute;inset:0;
+  background:
+    radial-gradient(620px 320px at 82% 12%,rgba(255,176,32,.22),transparent 70%),
+    radial-gradient(500px 300px at 8% 88%,rgba(255,90,60,.18),transparent 70%);
+  pointer-events:none;
+}
+.hero-grid{
+  position:relative;display:grid;
+  grid-template-columns:1.15fr .85fr;gap:44px;align-items:center;
+}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  font-size:13px;letter-spacing:1.5px;text-transform:uppercase;
+  color:var(--gold);font-weight:700;margin-bottom:14px;
+}
+.eyebrow .dot{width:7px;height:7px;border-radius:50%;background:var(--brand);box-shadow:0 0 0 4px rgba(255,90,60,.22);}
+.hero h1{
+  color:#fff;font-size:38px;font-weight:800;letter-spacing:.5px;
+  margin-bottom:16px;
+}
+.hero-lead{font-size:16px;color:#b9c6df;max-width:520px;}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:26px;}
+.btn{
+  display:inline-flex;align-items:center;gap:9px;
+  padding:12px 22px;border-radius:12px;
+  font-size:15px;font-weight:700;transition:.2s;
+}
+.btn-primary{background:var(--brand);color:#fff;box-shadow:0 8px 20px rgba(255,90,60,.32);}
+.btn-primary:hover{background:#f2492a;transform:translateY(-1px);}
+.btn-ghost{border:1px solid rgba(255,255,255,.28);color:#dfe7f7;pointer-events:none;opacity:.85;}
+.hero-stats{
+  position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;
+  margin-top:34px;border-top:1px solid rgba(255,255,255,.14);padding-top:22px;
+}
+.hero-stats div strong{display:block;font-size:22px;color:#fff;font-weight:800;}
+.hero-stats div span{font-size:13px;color:#93a4c4;}
+
+/* hero visual */
+.hero-visual{position:relative;}
+.board{
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.16);
+  border-radius:20px;padding:20px;
+  backdrop-filter:blur(6px);
+}
+.board-title{display:flex;justify-content:space-between;align-items:center;font-size:13px;color:#9fb0cf;margin-bottom:14px;}
+.board-title b{color:#fff;font-size:14px;font-weight:700;}
+.match-row{
+  display:flex;align-items:center;gap:12px;
+  padding:12px 0;border-bottom:1px dashed rgba(255,255,255,.13);
+}
+.match-row:last-child{border-bottom:0;padding-bottom:0;}
+.m-badge{
+  width:34px;height:34px;border-radius:10px;flex-shrink:0;
+  display:flex;align-items:center;justify-content:center;
+  background:rgba(255,176,32,.16);color:var(--gold);font-size:12px;font-weight:800;
+}
+.match-row .m-name{font-size:14px;color:#e7edfa;font-weight:600;}
+.match-row .m-sub{font-size:12px;color:#8ea0bf;}
+.match-row .m-time{margin-left:auto;font-size:12.5px;color:var(--teal);font-weight:700;}
+
+/* section common */
+section{padding:58px 0;}
+.section-head{margin-bottom:28px;max-width:720px;}
+.kicker{font-size:13px;font-weight:800;letter-spacing:1.2px;color:var(--brand);text-transform:uppercase;margin-bottom:8px;}
+.section-head h2{font-size:26px;font-weight:800;margin-bottom:10px;}
+.section-head p{color:var(--muted);font-size:15px;}
+
+/* entry cards */
+.entry-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.entry-card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:24px;box-shadow:var(--shadow);display:flex;flex-direction:column;
+}
+.entry-icon{
+  width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;
+  background:#fff3ef;margin-bottom:16px;
+}
+.entry-card h3{font-size:17px;margin-bottom:8px;}
+.entry-card p{font-size:14.5px;color:var(--muted);flex:1;}
+.entry-card .tag{
+  margin-top:16px;font-size:13px;font-weight:700;color:var(--brand);
+  display:inline-flex;align-items:center;gap:6px;
+}
+
+/* schedule table */
+.schedule{background:#fff;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);}
+.sched-row{
+  display:grid;grid-template-columns:96px 1.4fr 1fr 110px;
+  gap:16px;align-items:center;padding:16px 22px;border-bottom:1px solid var(--line);
+}
+.sched-row:last-child{border-bottom:0;}
+.sched-row.head{
+  background:#f1f5fb;font-size:12.5px;font-weight:800;color:var(--muted);
+  letter-spacing:.6px;text-transform:uppercase;
+}
+.sched-row .s-time{font-weight:800;color:var(--ink);font-size:14.5px;}
+.sched-row .s-name{font-weight:600;font-size:15px;color:var(--ink-2);}
+.sched-row .s-desc{font-size:13.5px;color:var(--muted);}
+.sched-row .s-state{font-size:12.5px;font-weight:700;text-align:right;}
+.state-live{color:var(--brand);}
+.state-soon{color:var(--teal);}
+.state-done{color:#9aa7bd;}
+
+/* two col */
+.split{display:grid;grid-template-columns:1.25fr .75fr;gap:24px;align-items:start;}
+.article-box{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow);}
+.article-box h3{font-size:19px;margin-bottom:12px;}
+.article-box p{font-size:15px;color:#41506b;margin-bottom:12px;}
+.article-box p:last-child{margin-bottom:0;}
+.side-list{display:grid;gap:14px;}
+.side-item{
+  background:#fff;border:1px solid var(--line);border-radius:14px;
+  padding:16px 18px;display:flex;gap:14px;align-items:flex-start;
+}
+.side-num{
+  width:30px;height:30px;border-radius:9px;background:#eef3fb;color:var(--ink);
+  font-weight:800;font-size:13px;display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.side-item h4{margin:0 0 4px;font-size:15px;color:var(--ink);}
+.side-item p{font-size:13.5px;color:var(--muted);}
+
+/* faq */
+.faq{display:grid;gap:14px;}
+.faq-item{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px 22px;}
+.faq-item h3{font-size:16px;margin-bottom:6px;}
+.faq-item p{font-size:14.5px;color:var(--muted);}
+
+/* footer */
+.site-footer{
+  background:var(--ink);color:#93a4c4;padding:44px 0 28px;margin-top:20px;
+}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px;}
+.footer-brand .logo-text{color:#fff;}
+.footer-brand p{font-size:14px;margin-top:14px;max-width:340px;color:#8c9dba;}
+.footer-col h4{color:#fff;font-size:14px;font-weight:700;margin-bottom:12px;}
+.footer-col a{display:block;font-size:14px;color:#93a4c4;padding:4px 0;transition:.2s;}
+.footer-col a:hover{color:#fff;}
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,.1);margin-top:32px;padding-top:20px;
+  display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  font-size:13px;color:#7d8ea9;
+}
+.footer-bottom .kw{color:#c9d5e8;}
+
+/* responsive */
+@media (max-width:960px){
+  .hero-grid{grid-template-columns:1fr;gap:34px;}
+  .hero h1{font-size:31px;}
+  .entry-grid{grid-template-columns:1fr 1fr;}
+  .split{grid-template-columns:1fr;}
+  .footer-grid{grid-template-columns:1fr 1fr;}
+}
+@media (max-width:720px){
+  .header-inner{height:auto;padding:12px 0;flex-wrap:wrap;gap:10px;}
+  .logo-text{font-size:15px;}
+  .nav{margin-left:0;width:100%;gap:2px;}
+  .nav a{font-size:13.5px;padding:7px 9px;}
+  .nav .nav-cta{padding:7px 12px;}
+  .hero{padding:38px 0 44px;}
+  .hero h1{font-size:26px;}
+  .hero-stats{grid-template-columns:1fr 1fr 1fr;gap:8px;}
+  .hero-stats div strong{font-size:18px;}
+  .hero-stats div span{font-size:11.5px;}
+  .entry-grid{grid-template-columns:1fr;}
+  .sched-row{grid-template-columns:74px 1fr 74px;gap:10px;padding:14px 16px;}
+  .sched-row .s-desc{display:none;}
+  .sched-row.head .s-desc{display:none;}
+  .section-head h2{font-size:22px;}
+  .article-box{padding:20px;}
+  .footer-grid{grid-template-columns:1fr;}
+  section{padding:44px 0;}
+}
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="logo" href="#top" aria-label="每日大赛51在线观看 首页">
+      <svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#111a2b"/>
+        <path d="M18 42 L32 16 L46 42 Z" fill="#ffb020"/>
+        <circle cx="32" cy="46" r="5" fill="#ff5a3c"/>
+      </svg>
+      <span class="logo-text">每日大赛51在线观看</span>
+    </a>
+    <nav class="nav" aria-label="主导航">
+      <a href="#entry">观看入口</a>
+      <a href="#schedule">今日赛程</a>
+      <a href="#guide">观看说明</a>
+      <a href="#faq">常见问题</a>
+      <a class="nav-cta" href="#entry">立即进入</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow"><span class="dot"></span>每日更新 · 当日看点</span>
+        <h1>每日大赛51在线观看</h1>
+        <p class="hero-lead">每天固定时段更新当日赛程与热门对阵，集中呈现每日大赛51在线观看所需的入口、看点与回看线索，先看安排，再决定看哪一场。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#entry">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>
+            进入观看入口
+          </a>
+          <a class="btn btn-ghost" href="#" data-download-placeholder="true" aria-disabled="true" tabindex="-1">下载</a>
+        </div>
+        <div class="hero-stats">
+          <div><strong>每日</strong><span>赛程更新</span></div>
+          <div><strong>多组</strong><span>热门对阵</span></div>
+          <div><strong>回看</strong><span>集锦线索</span></div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="board" aria-label="今日推荐对阵示意">
+          <div class="board-title"><b>今日推荐对阵</b><span>示意排期</span></div>
+          <div class="match-row">
+            <div class="m-badge">A</div>
+            <div>
+              <div class="m-name">小组焦点对决</div>
+              <div class="m-sub">人气选手 vs 卫冕阵容</div>
+            </div>
+            <div class="m-time">19:30</div>
+          </div>
+          <div class="match-row">
+            <div class="m-badge">B</div>
+            <div>
+              <div class="m-name">新锐挑战场</div>
+              <div class="m-sub">新人黑马冲击榜首</div>
+            </div>
+            <div class="m-time">20:15</div>
+          </div>
+          <div class="match-row">
+            <div class="m-badge">C</div>
+            <div>
+              <div class="m-name">压轴主赛</div>
+              <div class="m-sub">当日晚间重点场次</div>
+            </div>
+            <div class="m-time">21:00</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="entry">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">观看入口</div>
+        <h2>三条常用路径，快速找到每日大赛51在线观看</h2>
+        <p>按你的使用习惯选择：想看当日安排、只想追热门对阵，或者补看错过的集锦，都可以从下面任意一条路径进入。</p>
+      </div>
+      <div class="entry-grid">
+        <article class="entry-card">
+          <div class="entry-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3" stroke="#ff5a3c" stroke-width="1.8"/><path d="M10 9.5v5l4-2.5z" fill="#ff5a3c"/></svg>
+          </div>
+          <h3>当日直播入口</h3>
+          <p>按开赛时间排列当日场次，先看今天有哪些比赛，再点进对应场次，适合习惯守着固定时段观看的人。</p>
+          <span class="tag">按时间进入 →</span>
+        </article>
+        <article class="entry-card">
+          <div class="entry-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z" stroke="#ffb020" stroke-width="1.7" stroke-linejoin="round"/></svg>
+          </div>
+          <h3>热门对阵精选</h3>
+          <p>把关注度高的对局单独拎出来，适合时间有限、只想看重点场次的观众，先锁定值得看的一场。</p>
+          <span class="tag">看重点场次 →</span>
+        </article>
+        <article class="entry-card">
+          <div class="entry-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="8.5" stroke="#0f9d8f" stroke-width="1.8"/><path d="M12 7.5V12l3 2" stroke="#0f9d8f" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+          <h3>错过的回看</h3>
+          <p>针对已经结束的场次，提供集锦与结果线索，方便补上错过的部分，也不用从头再看一遍。</p>
+          <span class="tag">补看集锦 →</span>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="schedule" style="padding-top:0;">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">今日赛程</div>
+        <h2>当日排期一览</h2>
+        <p>下表为每日大赛51在线观看的日程示意，按时间段划分场次与看点，实际开赛时间以当日更新为准。</p>
+      </div>
+      <div class="schedule" role="table" aria-label="当日赛程示意">
+        <div class="sched-row head" role="row">
+          <div role="columnheader">时间</div>
+          <div role="columnheader">场次</div>
+          <div class="s-desc" role="columnheader">看点</div>
+          <div role="columnheader" style="text-align:right;">状态</div>
+        </div>
+        <div class="sched-row" role="row">
+          <div class="s-time">18:00</div>
+          <div class="s-name">开场预热场</div>
+          <div class="s-desc">新人登场，节奏较快</div>
+          <div class="s-state state-done">已结束</div>
+        </div>
+        <div class="sched-row" role="row">
+          <div class="s-time">19:30</div>
+          <div class="s-name">小组焦点对决</div>
+          <div class="s-desc">人气选手对阵卫冕阵容</div>
+          <div class="s-state state-live">进行中</div>
+        </div>
+        <div class="sched-row" role="row">
+          <div class="s-time">20:15</div>
+          <div class="s-name">新锐挑战场</div>
+          <div class="s-desc">黑马冲击当日榜首</div>
+          <div class="s-state state-soon">即将开始</div>
+        </div>
+        <div class="sched-row" role="row">
+          <div class="s-time">21:00</div>
+          <div class="s-name">压轴主赛</div>
+          <div class="s-desc">晚间重点场次，关注度最高</div>
+          <div class="s-state state-soon">即将开始</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="guide" style="padding-top:0;">
+    <div class="wrap split">
+      <article class="article-box">
+        <h3>每日大赛51在线观看怎么看更省时间</h3>
+        <p>每日大赛的场次集中在傍晚到夜间，先看排期表再决定要不要守着，是最省时间的做法。排期按时间顺序排列，每行标注场次名称、看点与当前状态，进行中的场次会用醒目颜色标出，避免错过。</p>
+        <p>如果你只关心重点场次，可以直接看“热门对阵精选”，那里把当日关注度较高的对局单独列出，并附一句简要看点，帮助你判断这场是否值得投入时间。对已经结束的场次，回看区提供集锦与结果线索，适合第二天补看。</p>
+        <p>需要说明的是，页面中的时间与状态属于当日排期示意，具体开赛时间可能因调整而变化，观看前建议以当日更新后的信息为准。每日大赛51在线观看的入口保持稳定，赛程内容则按天刷新，这也是它适合作为日常固定访问页面的原因。</p>
+      </article>
+      <aside class="side-list" aria-label="观看小贴士">
+        <div class="side-item">
+          <div class="side-num">1</div>
+          <div>
+            <h4>先看状态再看时间</h4>
+            <p>进行中的场次优先，避免开场后才切进去。</p>
+          </div>
+        </div>
+        <div class="side-item">
+          <div class="side-num">2</div>
+          <div>
+            <h4>关注压轴场</h4>
+            <p>晚间重点场次通常关注度最高，值得留出时间。</p>
+          </div>
+        </div>
+        <div class="side-item">
+          <div class="side-num">3</div>
+          <div>
+            <h4>错过后看集锦</h4>
+            <p>结果与关键片段集中在回看区，补看更高效。</p>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section id="faq" style="padding-top:0;">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="kicker">常见问题</div>
+        <h2>关于每日大赛51在线观看的常见疑问</h2>
+        <p>下面几条是访问者最常问的问题，答案围绕页面实际提供的内容展开。</p>
+      </div>
+      <div class="faq">
+        <div class="faq-item">
+          <h3>每日大赛51在线观看每天都会更新吗？</h3>
+          <p>页面按日整理当日赛程与看点，正常更新节奏是每天刷新一次排期与状态，遇到场次调整会以当日信息为准。</p>
+        </div>
+        <div class="faq-item">
+          <h3>错过直播还能补看吗？</h3>
+          <p>可以。已结束的场次会进入回看区，提供集锦与结果线索，适合在第二天或空闲时补看重点片段。</p>
+        </div>
+        <div class="faq-item">
+          <h3>只想看重点场次，应该从哪里开始？</h3>
+          <p>建议直接看“热门对阵精选”，那里把当日关注度较高的对局单独列出，并附简要看点，比逐条翻排期更快。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="logo" href="#top" aria-label="返回顶部">
+          <svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true">
+            <rect width="64" height="64" rx="14" fill="#ffffff" opacity="0.08"/>
+            <path d="M18 42 L32 16 L46 42 Z" fill="#ffb020"/>
+            <circle cx="32" cy="46" r="5" fill="#ff5a3c"/>
+          </svg>
+          <span class="logo-text">每日大赛51在线观看</span>
+        </a>
+        <p>以当日排期与热门对阵为核心的观看入口页，帮助你快速定位想看的那一场，再决定观看或补看。</p>
+      </div>
+      <div class="footer-col">
+        <h4>页面导航</h4>
+        <a href="#entry">观看入口</a>
+        <a href="#schedule">今日赛程</a>
+        <a href="#guide">观看说明</a>
+        <a href="#faq">常见问题</a>
+      </div>
+      <div class="footer-col">
+        <h4>内容说明</h4>
+        <a href="#schedule">排期与状态</a>
+        <a href="#entry">热门对阵</a>
+        <a href="#guide">回看线索</a>
+        <a href="#" data-download-placeholder="true" aria-disabled="true" tabindex="-1" style="pointer-events:none;">下载</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 <span class="kw">每日大赛51在线观看</span> · 当日赛程与看点集合</span>
+      <span>排期与时间为当日示意，实际以更新信息为准</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
