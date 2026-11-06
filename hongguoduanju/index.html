@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>红果短剧电脑版下载-红果短剧电脑版安装_电脑看短剧软件下载</title>
+<meta name="description" content="红果短剧电脑版下载页面，说明电脑端观看短剧的常见途径、安装准备与使用注意事项，帮助用户在电脑上顺畅找到并打开红果短剧内容。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23e8452e'/%3E%3Cpath d='M24 18l24 14-24 14z' fill='%23fff'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --red:#e8452e;
+    --red-deep:#c73520;
+    --ink:#1f2328;
+    --sub:#5c6672;
+    --line:#e8e4df;
+    --bg:#fbf8f4;
+    --card:#ffffff;
+    --warm:#fff3ec;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+    background:var(--bg);color:var(--ink);line-height:1.75;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none;}
+  img,svg{display:block;}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 24px;}
+
+  /* 页头 */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(251,248,244,.92);backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .head-inner{display:flex;align-items:center;gap:28px;height:68px;}
+  .logo{display:flex;align-items:center;gap:10px;font-weight:800;font-size:17px;letter-spacing:.2px;white-space:nowrap;}
+  .logo .mark{width:34px;height:34px;border-radius:10px;background:linear-gradient(135deg,#f0603f,#d1301c);display:flex;align-items:center;justify-content:center;flex:none;}
+  .logo .mark svg{width:16px;height:16px;}
+  nav{margin-left:auto;display:flex;gap:26px;font-size:14.5px;color:var(--sub);}
+  nav a:hover{color:var(--red);}
+  .head-cta{
+    font-size:14px;font-weight:600;color:#fff;background:var(--red);
+    padding:9px 18px;border-radius:999px;white-space:nowrap;
+  }
+  .head-cta:hover{background:var(--red-deep);}
+  .menu-btn{display:none;background:none;border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:16px;color:var(--ink);}
+
+  /* 首屏 */
+  .hero{padding:64px 0 56px;position:relative;overflow:hidden;}
+  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:var(--red-deep);background:var(--warm);border:1px solid #f6d9cd;padding:5px 14px;border-radius:999px;margin-bottom:20px;}
+  h1{font-size:40px;line-height:1.25;font-weight:800;letter-spacing:-.5px;}
+  h1 em{font-style:normal;color:var(--red);}
+  .lead{margin-top:18px;font-size:16.5px;color:var(--sub);max-width:560px;}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px;}
+  .btn-primary{
+    display:inline-flex;align-items:center;gap:9px;
+    background:var(--red);color:#fff;font-weight:700;font-size:15.5px;
+    padding:13px 26px;border-radius:12px;box-shadow:0 10px 24px -10px rgba(232,69,46,.75);
+  }
+  .btn-primary:hover{background:var(--red-deep);}
+  .btn-primary[aria-disabled="true"]{cursor:default;}
+  .btn-ghost{
+    display:inline-flex;align-items:center;gap:8px;
+    border:1px solid var(--line);background:#fff;color:var(--ink);
+    font-weight:600;font-size:15px;padding:12px 22px;border-radius:12px;
+  }
+  .btn-ghost:hover{border-color:#d9d2c9;}
+  .hero-note{margin-top:16px;font-size:13px;color:#8b939c;}
+
+  .hero-visual{
+    background:linear-gradient(160deg,#fff,#fff4ee);
+    border:1px solid #f2e3d8;border-radius:22px;padding:22px;
+    box-shadow:0 24px 60px -34px rgba(180,90,60,.45);
+  }
+  .screen{background:#201a18;border-radius:14px;overflow:hidden;}
+  .screen-bar{display:flex;align-items:center;gap:6px;padding:9px 12px;background:#2c2421;}
+  .screen-bar i{width:9px;height:9px;border-radius:50%;background:#5a4b45;display:block;}
+  .screen-body{padding:16px 14px;display:flex;flex-direction:column;gap:10px;}
+  .ep{display:flex;gap:10px;align-items:center;}
+  .ep .thumb{width:64px;height:42px;border-radius:7px;background:linear-gradient(120deg,#e8452e,#f39b6b);flex:none;}
+  .ep .thumb.alt{background:linear-gradient(120deg,#5a6b8c,#93a7c7);}
+  .ep .thumb.alt2{background:linear-gradient(120deg,#8d5f9e,#c9a0d6);}
+  .ep .lines{flex:1;display:flex;flex-direction:column;gap:6px;}
+  .ep .lines span{height:8px;border-radius:4px;background:#3d3330;}
+  .ep .lines span:first-child{width:78%;background:#4d403b;}
+  .ep .lines span:last-child{width:48%;}
+  .cap{margin-top:12px;font-size:12.5px;color:#9a8f88;text-align:center;}
+
+  /* 通用分区 */
+  section{padding:56px 0;}
+  .sec-head{max-width:720px;margin-bottom:34px;}
+  .sec-tag{font-size:13px;font-weight:700;color:var(--red);letter-spacing:1.5px;margin-bottom:10px;}
+  h2{font-size:27px;font-weight:800;line-height:1.35;letter-spacing:-.3px;}
+  .sec-sub{margin-top:12px;font-size:15.5px;color:var(--sub);}
+
+  /* 途径卡片 */
+  .paths{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .path-card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:26px 24px;transition:.2s;}
+  .path-card:hover{transform:translateY(-3px);box-shadow:0 18px 40px -28px rgba(80,50,30,.4);}
+  .path-ico{width:44px;height:44px;border-radius:12px;background:var(--warm);display:flex;align-items:center;justify-content:center;margin-bottom:16px;}
+  .path-ico svg{width:22px;height:22px;stroke:var(--red);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;}
+  .path-card h3{font-size:17px;font-weight:700;margin-bottom:9px;}
+  .path-card p{font-size:14.5px;color:var(--sub);}
+
+  /* 步骤 */
+  .steps-wrap{background:#fff;border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;counter-reset:step;}
+  .step{position:relative;padding-top:10px;}
+  .step::before{
+    counter-increment:step;content:counter(step,decimal-leading-zero);
+    font-size:13px;font-weight:800;color:var(--red);
+    display:inline-block;background:var(--warm);border-radius:8px;padding:3px 9px;margin-bottom:12px;letter-spacing:.5px;
+  }
+  .step h3{font-size:16px;font-weight:700;margin-bottom:8px;}
+  .step p{font-size:14px;color:var(--sub);}
+
+  /* 说明/问答 */
+  .faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+  .qa{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 24px;}
+  .qa h3{font-size:16px;font-weight:700;margin-bottom:9px;display:flex;gap:9px;align-items:flex-start;}
+  .qa h3 span{color:var(--red);font-weight:800;flex:none;}
+  .qa p{font-size:14.5px;color:var(--sub);}
+
+  /* 正文区块 */
+  .article{background:#fff;border:1px solid var(--line);border-radius:18px;padding:38px 40px;}
+  .article p{font-size:15.5px;color:#3a4149;margin-bottom:16px;}
+  .article p:last-child{margin-bottom:0;}
+  .article strong{color:var(--red-deep);}
+  .article h3{font-size:18px;font-weight:800;margin:26px 0 12px;}
+  .article h3:first-child{margin-top:0;}
+
+  /* 下载卡 */
+  .dl-band{background:linear-gradient(135deg,#2a1e1a,#4a2a20);color:#fff;border-radius:20px;padding:44px 42px;display:flex;flex-wrap:wrap;align-items:center;gap:28px;}
+  .dl-band h2{color:#fff;font-size:24px;}
+  .dl-band p{color:#f0d6c9;font-size:14.5px;margin-top:10px;max-width:560px;}
+  .dl-band .btn-primary{margin-left:auto;box-shadow:none;background:#fff;color:var(--red-deep);}
+  .dl-band .btn-primary:hover{background:#ffe9df;}
+  .dl-meta{font-size:12.5px;color:#d9b6a6;width:100%;}
+
+  /* 页尾 */
+  footer{border-top:1px solid var(--line);padding:40px 0 34px;background:#fbf8f4;}
+  .foot-top{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;}
+  .foot-brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:15px;}
+  .foot-brand .mark{width:28px;height:28px;border-radius:8px;background:linear-gradient(135deg,#f0603f,#d1301c);display:flex;align-items:center;justify-content:center;flex:none;}
+  .foot-brand .mark svg{width:13px;height:13px;}
+  .foot-links{display:flex;gap:22px;font-size:14px;color:var(--sub);flex-wrap:wrap;}
+  .foot-links a:hover{color:var(--red);}
+  .foot-bottom{margin-top:22px;padding-top:18px;border-top:1px solid var(--line);font-size:12.5px;color:#8b939c;display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;}
+
+  @media(max-width:900px){
+    .hero-grid{grid-template-columns:1fr;gap:36px;}
+    .hero-visual{order:2;}
+    .paths{grid-template-columns:1fr;}
+    .steps{grid-template-columns:1fr 1fr;}
+    .faq-grid{grid-template-columns:1fr;}
+    .article{padding:28px 22px;}
+    .dl-band{padding:32px 24px;}
+    .dl-band .btn-primary{margin-left:0;}
+  }
+  @media(max-width:720px){
+    .wrap{padding:0 18px;}
+    nav{display:none;position:absolute;top:68px;left:0;right:0;background:#fff;flex-direction:column;gap:0;border-bottom:1px solid var(--line);padding:8px 18px 14px;}
+    nav.open{display:flex;}
+    nav a{padding:11px 0;border-bottom:1px solid #f4f0eb;font-size:15px;}
+    .menu-btn{display:block;margin-left:auto;}
+    .head-cta{display:none;}
+    .head-inner{gap:12px;position:relative;}
+    h1{font-size:29px;}
+    .lead{font-size:15.5px;}
+    section{padding:40px 0;}
+    h2{font-size:22px;}
+    .hero{padding:40px 0 34px;}
+    .steps{grid-template-columns:1fr;}
+    .foot-bottom{flex-direction:column;gap:6px;}
+  }
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header>
+  <div class="wrap head-inner">
+    <a class="logo" href="#top" aria-label="红果短剧电脑版下载首页">
+      <span class="mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24"><path d="M8 5l12 7-12 7z" fill="#fff"/></svg>
+      </span>
+      <span>红果短剧电脑版下载</span>
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="mainNav">菜单</button>
+    <nav id="mainNav">
+      <a href="#ways">电脑观看途径</a>
+      <a href="#steps">安装准备</a>
+      <a href="#faq">常见疑问</a>
+      <a href="#detail">使用说明</a>
+      <a href="#download">获取入口</a>
+    </nav>
+    <a class="head-cta" href="#download">查看下载入口</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- 首屏 -->
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <span class="eyebrow">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>
+          电脑端观看短剧 · 途径与准备
+        </span>
+        <h1>红果短剧电脑版下载</h1>
+        <p class="lead">想在电脑上追红果短剧，先弄清有哪些可行方式。本页围绕红果短剧电脑版下载的实际需求，说明电脑端观看的常见途径、安装前需要准备的条件，以及使用中容易遇到的问题，帮助你少走弯路。</p>
+        <div class="hero-actions">
+          <a class="btn-primary" href="#download">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>
+            前往下载入口
+          </a>
+          <a class="btn-ghost" href="#ways">先看电脑观看途径</a>
+        </div>
+        <p class="hero-note">页面内容为观看方式与安装条件说明，下载入口以官方渠道为准。</p>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="screen">
+          <div class="screen-bar"><i></i><i></i><i></i></div>
+          <div class="screen-body">
+            <div class="ep"><div class="thumb"></div><div class="lines"><span></span><span></span></div></div>
+            <div class="ep"><div class="thumb alt"></div><div class="lines"><span></span><span></span></div></div>
+            <div class="ep"><div class="thumb alt2"></div><div class="lines"><span></span><span></span></div></div>
+            <div class="ep"><div class="thumb"></div><div class="lines"><span></span><span></span></div></div>
+          </div>
+        </div>
+        <p class="cap">电脑大屏观看短剧的示意画面</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 途径 -->
+  <section id="ways">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-tag">途径对比</div>
+        <h2>电脑上看红果短剧，主要有三条路</h2>
+        <p class="sec-sub">红果短剧电脑版下载并不是唯一选择。先判断自己更需要“大屏观看”还是“固定入口”，再决定采用哪种方式。</p>
+      </div>
+      <div class="paths">
+        <article class="path-card">
+          <div class="path-ico">
+            <svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="13" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <h3>安卓模拟器运行</h3>
+          <p>在电脑上安装安卓模拟器，再在模拟器内获取红果短剧应用。适合习惯在电脑上操作安卓应用的用户，需要留意模拟器本身的硬件占用。</p>
+        </article>
+        <article class="path-card">
+          <div class="path-ico">
+            <svg viewBox="0 0 24 24"><path d="M4 5h16v11H4z"/><path d="M9 20h6M12 16v4"/><path d="M9 9l3 2-3 2z"/></svg>
+          </div>
+          <h3>浏览器网页观看</h3>
+          <p>通过浏览器访问红果短剧相关网页端，无需安装额外程序。打开即用，但可观看范围与登录状态以网页端实际提供为准。</p>
+        </article>
+        <article class="path-card">
+          <div class="path-ico">
+            <svg viewBox="0 0 24 24"><path d="M12 3l8 4v6c0 4.5-3.4 7.4-8 8-4.6-.6-8-3.5-8-8V7z"/><path d="M9 12l2 2 4-4"/></svg>
+          </div>
+          <h3>官方渠道获取</h3>
+          <p>红果短剧电脑版下载应以官方公布的渠道为准。获取前确认来源名称与页面信息一致，避免使用来源不明的安装包。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 步骤 -->
+  <section class="steps-wrap" id="steps">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-tag">安装准备</div>
+        <h2>动手之前，先把这四件事准备好</h2>
+        <p class="sec-sub">无论选择哪种方式，以下准备都直接影响红果短剧电脑版下载后的使用体验。</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <h3>确认系统环境</h3>
+          <p>查看电脑系统版本、剩余磁盘空间与内存情况。模拟器方案对内存和存储的要求更高，建议预留充足空间。</p>
+        </div>
+        <div class="step">
+          <h3>选择获取渠道</h3>
+          <p>优先使用官方公布的入口。红果短剧电脑版下载页面上的来源名称、应用标识应与官方信息对应。</p>
+        </div>
+        <div class="step">
+          <h3>处理安装权限</h3>
+          <p>安装过程中如出现系统安全提示，按提示确认来源可信。不要关闭系统防护，也不要安装附带的其他程序。</p>
+        </div>
+        <div class="step">
+          <h3>登录并设置偏好</h3>
+          <p>首次打开后完成登录，按需调整清晰度、播放速度与观看记录同步，让大屏观看更贴合自己的习惯。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 问答 -->
+  <section id="faq">
+    <div class="wrap">
+      <div class="sec-head">
+        <div class="sec-tag">常见疑问</div>
+        <h2>围绕红果短剧电脑版下载的高频问题</h2>
+        <p class="sec-sub">以下回答只就观看方式与操作层面作出说明，功能范围以应用实际版本为准。</p>
+      </div>
+      <div class="faq-grid">
+        <div class="qa">
+          <h3><span>Q</span>电脑上一定要安装客户端吗？</h3>
+          <p>不一定。可以先尝试网页端观看；如果更看重固定入口和大屏操作习惯，再考虑红果短剧电脑版下载配合模拟器使用。</p>
+        </div>
+        <div class="qa">
+          <h3><span>Q</span>模拟器方式会不会很占资源？</h3>
+          <p>模拟器需要占用一定的内存和磁盘空间。电脑配置较低时，可先关闭其他大型程序，或改用浏览器方式观看。</p>
+        </div>
+        <div class="qa">
+          <h3><span>Q</span>观看记录能在电脑和手机间同步吗？</h3>
+          <p>同步情况取决于账号登录状态与端上实际支持的功能。使用同一账号登录，通常更利于保持观看进度一致。</p>
+        </div>
+        <div class="qa">
+          <h3><span>Q</span>下载后打不开怎么办？</h3>
+          <p>先确认安装包是否完整、来源是否可靠，再检查系统权限与运行环境。若仍无法打开，建议回到官方渠道重新获取。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 正文说明 -->
+  <section id="detail">
+    <div class="wrap">
+      <div class="article">
+        <h3>为什么大家想在电脑上看短剧</h3>
+        <p>手机看短剧方便，但长时间握持容易疲劳，屏幕尺寸也限制了画面细节。于是“红果短剧电脑版下载”成为不少用户的搜索词。需要说明的是，电脑端观看的核心诉求通常不是某一个安装包，而是<strong>能不能在更大的屏幕上稳定、连续地看完一部短剧</strong>。理解这一点，选择方式时就不会只盯着“下载”两个字。</p>
+        <h3>三种方式的取舍逻辑</h3>
+        <p>浏览器网页观看门槛最低，打开即用，适合偶尔看看、不想在电脑上多装程序的用户；安卓模拟器方案更接近手机端的使用体验，适合已经习惯在电脑上操作安卓应用的人，但要接受一定的资源占用；官方渠道获取则关系到安装包是否可靠，是红果短剧电脑版下载过程中最需要谨慎的一环。三者并非互斥，可以先用网页端试水，再决定是否进一步安装。</p>
+        <h3>下载与安装时的注意事项</h3>
+        <p>红果短剧电脑版下载相关的页面不少，判断来源是否可信，可以看应用名称、开发者信息与页面表述是否一致。安装时留意是否有捆绑勾选项，取消不需要的附加程序。安装完成后先检查能否正常登录、能否播放，再逐步调整清晰度与播放设置。若出现卡顿，优先排查网络与后台程序，而不是反复重装。</p>
+        <h3>把观看体验放在第一位</h3>
+        <p>无论最终采用哪种方式，红果短剧电脑版下载只是起点。真正影响体验的是网络稳定性、账号登录状态和播放设置是否合适。建议在固定网络环境下观看，保持账号登录，并定期清理缓存。这样即便换设备，也能较快找回上次看到的位置，让大屏追剧这件事变得省心。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 下载入口 -->
+  <section id="download">
+    <div class="wrap">
+      <div class="dl-band">
+        <div>
+          <h2>获取红果短剧电脑版下载入口</h2>
+          <p>下载入口将指向官方公布的获取渠道。获取前请核对来源名称与应用标识，安装过程中留意附加选项，按需完成登录与播放设置。</p>
+        </div>
+        <a class="btn-primary" href="#" data-download-placeholder="true" aria-disabled="true" tabindex="-1">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>
+          下载
+        </a>
+        <p class="dl-meta">提示：下载地址以官方渠道公布为准，请勿使用来源不明的安装包。</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <span class="mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M8 5l12 7-12 7z" fill="#fff"/></svg>
+        </span>
+        <span>红果短剧电脑版下载</span>
+      </div>
+      <div class="foot-links">
+        <a href="#ways">电脑观看途径</a>
+        <a href="#steps">安装准备</a>
+        <a href="#faq">常见疑问</a>
+        <a href="#detail">使用说明</a>
+        <a href="#download">获取入口</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>本页围绕红果短剧电脑版下载整理观看方式与安装条件说明，具体功能以应用实际版本为准。</span>
+      <span>内容仅供参考，请通过官方渠道获取应用。</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    var btn = document.getElementById('menuBtn');
+    var nav = document.getElementById('mainNav');
+    if(!btn || !nav) return;
+    btn.addEventListener('click', function(){
+      var open = nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+    nav.addEventListener('click', function(e){
+      if(e.target.tagName === 'A'){
+        nav.classList.remove('open');
+        btn.setAttribute('aria-expanded','false');
+      }
+    });
+  })();
+</script>
+</body>
+</html>
