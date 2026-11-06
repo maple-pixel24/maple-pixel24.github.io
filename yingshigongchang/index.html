@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>影视工厂-影视工厂资源库_影视工厂高清影视免费看</title>
+<meta name="description" content="影视工厂是一个汇集院线电影、热播剧集、纪录片与动漫的影视资源库，提供高清在线观看与片单浏览，按类型、地区和年份快速找到想看的内容。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2314181f'/%3E%3Cpath d='M18 20h28v6H18zM18 30h28v6H18zM18 40h18v6H18z' fill='%23f5c451'/%3E%3Ccircle cx='47' cy='43' r='7' fill='none' stroke='%23f5c451' stroke-width='4'/%3E%3C/svg%3E">
+<style>
+  :root{
+    --bg:#0f1319;
+    --bg-soft:#161b23;
+    --card:#1b212b;
+    --line:#2a3240;
+    --text:#e8ecf2;
+    --muted:#98a3b3;
+    --accent:#f5c451;
+    --accent-deep:#e0a92e;
+    --radius:14px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:"PingFang SC","Microsoft YaHei","Hiragino Sans GB",system-ui,-apple-system,"Segoe UI",sans-serif;
+    line-height:1.75;
+    font-size:16px;
+    -webkit-font-smoothing:antialiased;
+  }
+  img,svg{display:block;max-width:100%;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{width:100%;max-width:1140px;margin:0 auto;padding:0 22px;}
+
+  /* 页头 */
+  header.site-head{
+    position:sticky;top:0;z-index:50;
+    background:rgba(15,19,25,.92);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  .head-inner{
+    display:flex;align-items:center;justify-content:space-between;
+    gap:20px;padding:14px 0;
+  }
+  .logo{display:flex;align-items:center;gap:10px;flex-shrink:0;}
+  .logo-mark{width:38px;height:38px;flex-shrink:0;}
+  .logo-text{
+    font-size:19px;font-weight:700;letter-spacing:.5px;
+    color:var(--text);white-space:nowrap;
+  }
+  .logo-text em{color:var(--accent);font-style:normal;}
+  nav.main-nav{display:flex;gap:6px;flex-wrap:wrap;justify-content:flex-end;}
+  nav.main-nav a{
+    padding:7px 13px;border-radius:999px;font-size:14.5px;color:var(--muted);
+    transition:.2s;
+  }
+  nav.main-nav a:hover{color:var(--text);background:#1f2732;}
+  nav.main-nav a.active{color:#161b23;background:var(--accent);font-weight:600;}
+
+  /* 首屏 */
+  .hero{
+    position:relative;overflow:hidden;
+    border-bottom:1px solid var(--line);
+    background:
+      radial-gradient(900px 380px at 82% -10%, rgba(245,196,81,.14), transparent 65%),
+      linear-gradient(180deg,#131922 0%, #0f1319 100%);
+  }
+  .hero-inner{
+    display:grid;grid-template-columns:1.25fr .85fr;gap:44px;
+    align-items:center;padding:62px 0 58px;
+  }
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:13px;letter-spacing:1.5px;color:var(--accent);
+    border:1px solid rgba(245,196,81,.35);border-radius:999px;
+    padding:4px 13px;margin-bottom:20px;
+  }
+  h1{
+    font-size:clamp(30px,4.6vw,46px);
+    line-height:1.22;letter-spacing:1px;font-weight:800;
+    margin-bottom:18px;
+  }
+  h1 span{color:var(--accent);}
+  .hero-lead{
+    color:var(--muted);font-size:16.5px;max-width:33em;margin-bottom:28px;
+  }
+  .hero-actions{display:flex;gap:14px;flex-wrap:wrap;align-items:center;}
+  .btn{
+    display:inline-flex;align-items:center;gap:9px;
+    padding:12px 24px;border-radius:999px;font-size:15.5px;font-weight:600;
+    border:1px solid transparent;cursor:pointer;transition:.2s;
+  }
+  .btn-primary{background:var(--accent);color:#161b23;}
+  .btn-primary:hover{background:#ffd670;}
+  .btn-ghost{border-color:var(--line);color:var(--text);background:#1a212b;}
+  .btn-ghost:hover{border-color:#3d4756;background:#202834;}
+  .hero-visual{
+    border:1px solid var(--line);border-radius:var(--radius);
+    background:linear-gradient(160deg,#1d232e,#151a22);
+    padding:18px;box-shadow:0 24px 50px -30px rgba(0,0,0,.9);
+  }
+  .hero-visual .frame-label{
+    display:flex;justify-content:space-between;align-items:center;
+    font-size:12.5px;color:var(--muted);margin-bottom:12px;letter-spacing:.5px;
+  }
+  .hero-visual .frame-label b{color:var(--accent);font-weight:600;}
+  .stat-row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px;}
+  .stat{
+    background:#141a22;border:1px solid var(--line);border-radius:10px;
+    padding:10px 12px;text-align:center;
+  }
+  .stat strong{display:block;font-size:19px;color:var(--accent);}
+  .stat small{font-size:12px;color:var(--muted);letter-spacing:.5px;}
+
+  /* 通用区块 */
+  section{padding:58px 0;}
+  section.alt{background:var(--bg-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .sec-head{margin-bottom:30px;max-width:46em;}
+  .sec-head h2{
+    font-size:clamp(21px,2.6vw,27px);font-weight:700;letter-spacing:.5px;
+    margin-bottom:10px;
+  }
+  .sec-head h2::before{
+    content:"";display:inline-block;width:6px;height:18px;
+    background:var(--accent);border-radius:3px;margin-right:11px;
+    vertical-align:-2px;
+  }
+  .sec-head p{color:var(--muted);font-size:15px;}
+
+  /* 类型导航 */
+  .genre-grid{
+    display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:14px;
+  }
+  .genre-card{
+    background:var(--card);border:1px solid var(--line);border-radius:12px;
+    padding:18px 16px;transition:.22s;
+  }
+  .genre-card:hover{border-color:rgba(245,196,81,.55);transform:translateY(-3px);}
+  .genre-card .g-icon{width:26px;height:26px;margin-bottom:10px;color:var(--accent);}
+  .genre-card h3{font-size:15.5px;margin-bottom:5px;font-weight:600;}
+  .genre-card p{font-size:13px;color:var(--muted);line-height:1.6;}
+
+  /* 片单卡片 */
+  .film-grid{
+    display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:22px;
+  }
+  .film-card{
+    background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+    overflow:hidden;display:flex;flex-direction:column;transition:.22s;
+  }
+  .film-card:hover{border-color:#3c4656;transform:translateY(-4px);}
+  .poster{
+    aspect-ratio:16/9;background:linear-gradient(135deg,#232c39,#161c25);
+    display:flex;align-items:center;justify-content:center;position:relative;
+    border-bottom:1px solid var(--line);
+  }
+  .poster svg{width:54px;height:54px;opacity:.5;color:var(--accent);}
+  .poster .tag{
+    position:absolute;left:12px;top:12px;font-size:12px;
+    background:rgba(245,196,81,.15);color:var(--accent);
+    border:1px solid rgba(245,196,81,.4);border-radius:6px;padding:2px 8px;
+  }
+  .film-body{padding:16px 17px 18px;flex:1;display:flex;flex-direction:column;gap:8px;}
+  .film-body h3{font-size:16.5px;font-weight:600;}
+  .film-body p{font-size:13.5px;color:var(--muted);line-height:1.65;flex:1;}
+  .film-meta{font-size:12.5px;color:#7d8898;display:flex;gap:12px;flex-wrap:wrap;}
+
+  /* 筛选控件 */
+  .filter-bar{
+    display:flex;flex-wrap:wrap;gap:10px;align-items:center;
+    background:var(--card);border:1px solid var(--line);border-radius:12px;
+    padding:14px 16px;margin-bottom:26px;
+  }
+  .filter-bar label{font-size:13.5px;color:var(--muted);margin-right:2px;}
+  .filter-bar select,.filter-bar input[type=search]{
+    background:#141a22;border:1px solid var(--line);color:var(--text);
+    border-radius:8px;padding:8px 11px;font-size:14px;font-family:inherit;
+    outline:none;transition:.2s;
+  }
+  .filter-bar select:focus,.filter-bar input[type=search]:focus{border-color:var(--accent);}
+  .filter-bar input[type=search]{flex:1;min-width:170px;}
+  .filter-bar .clear-btn{
+    background:none;border:1px solid var(--line);color:var(--muted);
+    border-radius:8px;padding:8px 14px;font-size:13.5px;cursor:pointer;
+    font-family:inherit;transition:.2s;
+  }
+  .filter-bar .clear-btn:hover{color:var(--text);border-color:#3d4756;}
+  .result-note{font-size:13.5px;color:var(--muted);margin-bottom:18px;}
+  .result-note b{color:var(--accent);}
+  .empty-tip{
+    display:none;border:1px dashed var(--line);border-radius:12px;
+    padding:34px 20px;text-align:center;color:var(--muted);font-size:14.5px;
+  }
+
+  /* 播放流程 */
+  .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px;}
+  .step{
+    background:var(--card);border:1px solid var(--line);border-radius:12px;
+    padding:22px 20px;position:relative;
+  }
+  .step .num{
+    font-size:13px;font-weight:700;color:var(--accent);letter-spacing:1px;
+    margin-bottom:10px;
+  }
+  .step h3{font-size:16px;margin-bottom:8px;}
+  .step p{font-size:13.5px;color:var(--muted);line-height:1.7;}
+
+  /* 说明与下载 */
+  .notes{
+    display:grid;grid-template-columns:1.4fr .9fr;gap:32px;align-items:start;
+  }
+  .notes-text h2{font-size:clamp(20px,2.4vw,25px);margin-bottom:14px;letter-spacing:.5px;}
+  .notes-text p{color:var(--muted);font-size:15px;margin-bottom:13px;}
+  .notes-text p strong{color:var(--text);font-weight:600;}
+  .download-box{
+    background:linear-gradient(160deg,#1e2531,#161b23);
+    border:1px solid var(--line);border-radius:var(--radius);padding:24px 22px;
+  }
+  .download-box h3{font-size:17px;margin-bottom:10px;}
+  .download-box p{font-size:13.5px;color:var(--muted);margin-bottom:18px;line-height:1.7;}
+  .btn-download{
+    display:flex;align-items:center;justify-content:center;gap:9px;
+    background:var(--accent);color:#161b23;font-weight:700;font-size:15px;
+    padding:12px 18px;border-radius:10px;width:100%;
+    pointer-events:none;opacity:.92;
+  }
+  .download-box small{display:block;margin-top:11px;font-size:12px;color:#6f7a8a;text-align:center;}
+
+  /* 页尾 */
+  footer.site-foot{
+    border-top:1px solid var(--line);background:#0c1015;
+    padding:40px 0 34px;
+  }
+  .foot-top{
+    display:flex;justify-content:space-between;gap:28px;flex-wrap:wrap;
+    padding-bottom:26px;border-bottom:1px solid var(--line);
+  }
+  .foot-brand{max-width:26em;}
+  .foot-brand .logo{margin-bottom:12px;}
+  .foot-brand p{font-size:13.5px;color:var(--muted);line-height:1.75;}
+  .foot-links{display:flex;gap:50px;flex-wrap:wrap;}
+  .foot-col h4{font-size:14px;margin-bottom:12px;color:var(--text);letter-spacing:.5px;}
+  .foot-col a{display:block;font-size:13.5px;color:var(--muted);margin-bottom:8px;transition:.2s;}
+  .foot-col a:hover{color:var(--accent);}
+  .foot-bottom{
+    padding-top:20px;display:flex;justify-content:space-between;
+    gap:14px;flex-wrap:wrap;font-size:12.5px;color:#68727f;
+  }
+
+  @media (max-width:900px){
+    .hero-inner{grid-template-columns:1fr;gap:34px;padding:46px 0 44px;}
+    .notes{grid-template-columns:1fr;}
+  }
+  @media (max-width:640px){
+    body{font-size:15.5px;}
+    .head-inner{flex-direction:column;align-items:flex-start;gap:12px;padding:13px 0;}
+    nav.main-nav{justify-content:flex-start;width:100%;}
+    nav.main-nav a{padding:6px 11px;font-size:13.5px;}
+    section{padding:42px 0;}
+    .hero-inner{padding:38px 0 36px;}
+    .hero-lead{font-size:15.5px;}
+    .film-grid{grid-template-columns:1fr;}
+    .stat strong{font-size:17px;}
+    .foot-links{gap:32px;}
+  }
+</style>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap head-inner">
+    <a class="logo" href="#top" aria-label="影视工厂首页">
+      <svg class="logo-mark" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#14181f"/>
+        <path d="M16 19h32v7H16z" fill="#f5c451"/>
+        <path d="M16 30h32v7H16z" fill="#f5c451" opacity=".75"/>
+        <path d="M16 41h19v7H16z" fill="#f5c451" opacity=".5"/>
+        <circle cx="47" cy="44" r="8" fill="none" stroke="#f5c451" stroke-width="4"/>
+      </svg>
+      <span class="logo-text">影视<em>工厂</em></span>
+    </a>
+    <nav class="main-nav" aria-label="主导航">
+      <a href="#top" class="active">首页</a>
+      <a href="#genres">类型</a>
+      <a href="#library">片库</a>
+      <a href="#howto">观看方式</a>
+      <a href="#about">关于</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- 首屏 -->
+  <div class="hero">
+    <div class="wrap hero-inner">
+      <div class="hero-copy">
+        <span class="eyebrow">影视资源 · 在线观看</span>
+        <h1>影视工厂</h1>
+        <p class="hero-lead">
+          影视工厂把院线电影、热播剧集、纪录片与动画片收进同一个片库，按类型、地区和年份归类，打开页面就能浏览片单、挑选片目，直接进入高清播放。想看什么，先从片库找起。
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#library">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+            进入片库浏览
+          </a>
+          <a class="btn btn-ghost" href="#genres">按类型找片</a>
+        </div>
+      </div>
+
+      <aside class="hero-visual" aria-label="片库概览">
+        <div class="frame-label"><span>片库概览</span><b>持续更新</b></div>
+        <svg viewBox="0 0 320 158" role="img" aria-label="影视工厂片库分类示意图" xmlns="http://www.w3.org/2000/svg">
+          <rect x="0" y="0" width="320" height="158" rx="10" fill="#121821"/>
+          <g fill="#f5c451">
+            <rect x="18" y="20" width="86" height="52" rx="6" opacity=".85"/>
+            <rect x="117" y="20" width="86" height="52" rx="6" opacity=".55"/>
+            <rect x="216" y="20" width="86" height="52" rx="6" opacity=".35"/>
+            <rect x="18" y="86" width="86" height="52" rx="6" opacity=".35"/>
+            <rect x="117" y="86" width="86" height="52" rx="6" opacity=".55"/>
+            <rect x="216" y="86" width="86" height="52" rx="6" opacity=".85"/>
+          </g>
+          <g fill="#0f1319">
+            <path d="M52 38v16l13-8z"/>
+            <path d="M151 38v16l13-8z"/>
+            <path d="M250 38v16l13-8z"/>
+            <path d="M52 104v16l13-8z"/>
+            <path d="M151 104v16l13-8z"/>
+            <path d="M250 104v16l13-8z"/>
+          </g>
+        </svg>
+        <div class="stat-row">
+          <div class="stat"><strong>6</strong><small>大类</small></div>
+          <div class="stat"><strong>HD</strong><small>高清</small></div>
+          <div class="stat"><strong>每日</strong><small>更新</small></div>
+        </div>
+      </aside>
+    </div>
+  </div>
+
+  <!-- 类型导航 -->
+  <section id="genres">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>按类型进入影视工厂</h2>
+        <p>不同类型的片子，观看时的期待并不一样。影视工厂把片库拆成几个常看的类别，先选类型，再在类别里挑片，比在整库中翻找更快。</p>
+      </div>
+      <div class="genre-grid">
+        <article class="genre-card">
+          <svg class="g-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M7 5v14M17 5v14M2 9h20M2 15h20"/></svg>
+          <h3>院线电影</h3>
+          <p>剧情、动作、科幻与文艺片，按上映年份归档，适合整块时间完整看完。</p>
+        </article>
+        <article class="genre-card">
+          <svg class="g-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 4v16M16 4v16"/></svg>
+          <h3>热播剧集</h3>
+          <p>国产剧、海外剧与迷你剧，按集数顺序排列，方便连续追看。</p>
+        </article>
+        <article class="genre-card">
+          <svg class="g-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          <h3>纪录片</h3>
+          <p>自然、历史与人物纪实，节奏舒缓，适合边看边了解背景。</p>
+        </article>
+        <article class="genre-card">
+          <svg class="g-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3l2.6 5.6 6.1.8-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.3 9.4l6.1-.8z"/></svg>
+          <h3>动画动漫</h3>
+          <p>剧场版动画与连载番剧，画风与题材跨度大，适合全家一起看。</p>
+        </article>
+        <article class="genre-card">
+          <svg class="g-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/></svg>
+          <h3>综艺节目</h3>
+          <p>访谈、竞技与生活类节目，单期时长灵活，适合碎片时间。</p>
+        </article>
+        <article class="genre-card">
+          <svg class="g-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h12"/></svg>
+          <h3>短片与微电影</h3>
+          <p>十几分钟讲完一个故事，适合通勤或睡前快速看完一部。</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 片库 -->
+  <section id="library" class="alt">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>影视工厂精选片单</h2>
+        <p>从片库中挑出几部常被点开的片目，覆盖电影、剧集、纪录片与动画。可以按类型、地区筛选，也可以直接输入片名检索。</p>
+      </div>
+
+      <div class="filter-bar">
+        <label for="fGenre">类型</label>
+        <select id="fGenre">
+          <option value="">全部</option>
+          <option value="电影">电影</option>
+          <option value="剧集">剧集</option>
+          <option value="纪录片">纪录片</option>
+          <option value="动画">动画</option>
+        </select>
+        <label for="fRegion">地区</label>
+        <select id="fRegion">
+          <option value="">全部</option>
+          <option value="国产">国产</option>
+          <option value="欧美">欧美</option>
+          <option value="日韩">日韩</option>
+        </select>
+        <input type="search" id="fSearch" placeholder="输入片名或关键词" aria-label="搜索片名">
+        <button class="clear-btn" type="button" id="fClear">重置筛选</button>
+      </div>
+      <p class="result-note" id="resultNote">当前显示 <b>6</b> 部片目</p>
+
+      <div class="film-grid" id="filmGrid">
+
+        <article class="film-card" data-genre="电影" data-region="国产" data-title="长夜将尽">
+          <div class="poster">
+            <span class="tag">电影</span>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+          <div class="film-body">
+            <h3>长夜将尽</h3>
+            <p>小城冬夜，一名夜班司机与三位乘客的交错故事，在一夜之间层层展开。</p>
+            <div class="film-meta"><span>国产</span><span>剧情</span><span>118 分钟</span></div>
+          </div>
+        </article>
+
+        <article class="film-card" data-genre="剧集" data-region="欧美" data-title="边界车站">
+          <div class="poster">
+            <span class="tag">剧集</span>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+          <div class="film-body">
+            <h3>边界车站</h3>
+            <p>跨国铁路线上的一桩旧案，牵出沿线数个小城的隐秘关系，共 8 集。</p>
+            <div class="film-meta"><span>欧美</span><span>悬疑</span><span>8 集</span></div>
+          </div>
+        </article>
+
+        <article class="film-card" data-genre="纪录片" data-region="国产" data-title="匠人手记">
+          <div class="poster">
+            <span class="tag">纪录片</span>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+          <div class="film-body">
+            <h3>匠人手记</h3>
+            <p>走访木作、制陶与织染的手艺人，记录一门手艺的日常与传承。</p>
+            <div class="film-meta"><span>国产</span><span>人文</span><span>6 集</span></div>
+          </div>
+        </article>
+
+        <article class="film-card" data-genre="动画" data-region="日韩" data-title="云上邮差">
+          <div class="poster">
+            <span class="tag">动画</span>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+          <div class="film-body">
+            <h3>云上邮差</h3>
+            <p>漂浮岛屿之间的信件投递，一个少年邮差在旅途中学会告别与重逢。</p>
+            <div class="film-meta"><span>日韩</span><span>奇幻</span><span>104 分钟</span></div>
+          </div>
+        </article>
+
+        <article class="film-card" data-genre="电影" data-region="欧美" data-title="静默频率">
+          <div class="poster">
+            <span class="tag">电影</span>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+          <div class="film-body">
+            <h3>静默频率</h3>
+            <p>射电望远镜捕捉到一段规律信号，研究团队必须在公开之前做出判断。</p>
+            <div class="film-meta"><span>欧美</span><span>科幻</span><span>126 分钟</span></div>
+          </div>
+        </article>
+
+        <article class="film-card" data-genre="剧集" data-region="国产" data-title="巷口六点半">
+          <div class="poster">
+            <span class="tag">剧集</span>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+          <div class="film-body">
+            <h3>巷口六点半</h3>
+            <p>一条老巷、一家小饭馆，每天傍晚六点半准时开张，也准时发生故事。</p>
+            <div class="film-meta"><span>国产</span><span>生活</span><span>24 集</span></div>
+          </div>
+        </article>
+
+      </div>
+      <div class="empty-tip" id="emptyTip">没有找到符合条件的片目，换个关键词或重置筛选再试试。</div>
+    </div>
+  </section>
+
+  <!-- 观看方式 -->
+  <section id="howto">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2>在影视工厂看片的三步</h2>
+        <p>不需要注册账号就能浏览片单。从进入片库到开始播放，通常只需要点几下。</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="num">STEP 01</div>
+          <h3>选类型或直接搜片</h3>
+          <p>在类型区按电影、剧集、纪录片等分类进入，或在上方筛选框输入片名关键词，缩小范围。</p>
+        </div>
+        <div class="step">
+          <div class="num">STEP 02</div>
+          <h3>看简介再决定</h3>
+          <p>每张卡片上有题材、地区和时长信息，先读简介判断是否符合口味，再点开播放页。</p>
+        </div>
+        <div class="step">
+          <div class="num">STEP 03</div>
+          <h3>进入高清播放</h3>
+          <p>播放页提供高清画质，剧集按集排列；片源状态会在片目信息中标注，便于判断。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 关于 + 下载 -->
+  <section id="about" class="alt">
+    <div class="wrap notes">
+      <div class="notes-text">
+        <h2>关于影视工厂片库</h2>
+        <p>影视工厂是一个以片目归类为核心的影视资源站。页面上的分类、地区与年份标签，来自片目本身的公开信息；简介由片目内容概括而来，用于帮助访问者快速判断是否值得点开。</p>
+        <p><strong>片目会持续补充。</strong>新上架的院线片与剧集会归入对应类型；旧片按年份整理，方便回看经典。片库中的片源状态会随播放地址变化而调整，标注为可播放的片目才建议直接点开。</p>
+        <p><strong>观看体验以稳定为先。</strong>播放页尽量保持简洁，减少干扰元素；遇到片源不可用时，可以先回到片库换一部同类片目，或稍后再试。</p>
+      </div>
+      <aside class="download-box">
+        <h3>影视工厂客户端</h3>
+        <p>桌面端片库工具，支持批量整理片单与本地收藏列表，适合经常按类型挑片的用户。</p>
+        <a class="btn-download" href="#" data-download-placeholder="true" aria-disabled="true" tabindex="-1">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M12 3v12M7 11l5 5 5-5M4 20h16"/></svg>
+          下载
+        </a>
+        <small>安装包地址即将公布</small>
+      </aside>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a class="logo" href="#top" aria-label="影视工厂首页">
+          <svg class="logo-mark" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect width="64" height="64" rx="14" fill="#14181f"/>
+            <path d="M16 19h32v7H16z" fill="#f5c451"/>
+            <path d="M16 30h32v7H16z" fill="#f5c451" opacity=".75"/>
+            <path d="M16 41h19v7H16z" fill="#f5c451" opacity=".5"/>
+            <circle cx="47" cy="44" r="8" fill="none" stroke="#f5c451" stroke-width="4"/>
+          </svg>
+          <span class="logo-text">影视<em>工厂</em></span>
+        </a>
+        <p>影视工厂汇集电影、剧集、纪录片与动画片目，按类型与地区归类，提供片单浏览与高清在线观看入口。</p>
+      </div>
+      <div class="foot-links">
+        <div class="foot-col">
+          <h4>浏览</h4>
+          <a href="#genres">类型分类</a>
+          <a href="#library">精选片单</a>
+          <a href="#howto">观看方式</a>
+        </div>
+        <div class="foot-col">
+          <h4>片库</h4>
+          <a href="#library">院线电影</a>
+          <a href="#library">热播剧集</a>
+          <a href="#library">纪录片</a>
+        </div>
+        <div class="foot-col">
+          <h4>站内</h4>
+          <a href="#about">关于影视工厂</a>
+          <a href="#top">返回顶部</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>影视工厂 · 片单与分类信息来自公开片目资料</span>
+      <span>内容仅供浏览参考</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var genreSel = document.getElementById('fGenre');
+  var regionSel = document.getElementById('fRegion');
+  var searchInput = document.getElementById('fSearch');
+  var clearBtn = document.getElementById('fClear');
+  var cards = Array.prototype.slice.call(document.querySelectorAll('#filmGrid .film-card'));
+  var note = document.getElementById('resultNote');
+  var emptyTip = document.getElementById('emptyTip');
+
+  function apply(){
+    var g = genreSel.value;
+    var r = regionSel.value;
+    var q = searchInput.value.trim().toLowerCase();
+    var visible = 0;
+    cards.forEach(function(card){
+      var okGenre = !g || card.getAttribute('data-genre') === g;
+      var okRegion = !r || card.getAttribute('data-region') === r;
+      var title = (card.getAttribute('data-title') || '').toLowerCase();
+      var text = card.textContent.toLowerCase();
+      var okQuery = !q || title.indexOf(q) > -1 || text.indexOf(q) > -1;
+      var show = okGenre && okRegion && okQuery;
+      card.style.display = show ? '' : 'none';
+      if(show) visible++;
+    });
+    note.innerHTML = '当前显示 <b>' + visible + '</b> 部片目';
+    emptyTip.style.display = visible === 0 ? 'block' : 'none';
+  }
+
+  genreSel.addEventListener('change', apply);
+  regionSel.addEventListener('change', apply);
+  searchInput.addEventListener('input', apply);
+  clearBtn.addEventListener('click', function(){
+    genreSel.value = '';
+    regionSel.value = '';
+    searchInput.value = '';
+    apply();
+  });
+})();
+</script>
+
+</body>
+                        </html>
